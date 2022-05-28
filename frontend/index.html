@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"
+    ></script>
+    <script src="//unpkg.com/@feathersjs/client@^4.5.0/dist/feathers.js"></script>
+    <script src="//unpkg.com/socket.io-client@^2.3.0/dist/socket.io.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body class="my-bg-image text-white">
+    <h1
+      class="text-6xl text-center my-4 border-b border-white pb-4 px-16 w-fit mx-auto"
+    >
+      Games
+    </h1>
+
+    <div class="flex justify-center gap-4 mt-8">
+      <input
+        id="game-title"
+        type="text"
+        class="px-4 py-2 outline-none text-black rounded-md"
+        placeholder="Input game title"
+      />
+      <button
+        onclick="createNewGame()"
+        class="px-4 py-2 bg-white rounded-md text-blue-700"
+      >
+        Create Game
+      </button>
+    </div>
+
+    <div
+      id="gamesContainer"
+      class="w-2/3 mx-auto p-8 flex gap-4 flex-wrap"
+    ></div>
+  </body>
+</html>
